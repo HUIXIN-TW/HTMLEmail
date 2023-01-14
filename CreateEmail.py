@@ -34,7 +34,7 @@ def main():
         content = content.replace('{SERVICE_NOTE}', SERVICE_NOTE)
         content = content.replace('{SERVICE_DDMMHHmm}', SERVICE_DDMMHHmm)
         content = content.replace('{ATTACHMENT_iCAL}', ATTACHMENT_iCAL)
-        email = open("Email.html", "w")
+        email = open("OutputEmail/Email.html", "w")
         email.write(content)
         email.close()
 
