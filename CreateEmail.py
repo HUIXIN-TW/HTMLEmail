@@ -1,39 +1,26 @@
 import os
-from dotenv import load_dotenv
+import sys
+from Client import Client as C
 
-
-load_dotenv()
-
-# need to update manually
-# how about .json?
-BOOKING_TYPE = os.getenv('BOOKING_TYPE')
-CLIENT_NAME = os.getenv('CLIENT_NAME')
-CLEANING_DATE = os.getenv('CLEANING_DATE')
-CLEANER_NAME = os.getenv('CLEANER_NAME')
-CLEANER_CONTACT = os.getenv('CLEANER_CONTACT')
-LOCATION = os.getenv('LOCATION')
-SERVICE_TYPE = os.getenv('SERVICE_TYPE')
-SERVICE_DETAIL = os.getenv('SERVICE_DETAIL')
-SERVICE_PAYMENT = os.getenv('SERVICE_PAYMENT')
-SERVICE_NOTE = os.getenv('SERVICE_NOTE')
-SERVICE_DDMMHHmm = os.getenv('SERVICE_DDMMHHmm')
-ATTACHMENT_iCAL = os.getenv('ATTACHMENT_iCAL')
 
 def main():
+    ClientName = sys.argv[1]
+    PATH = f'Client/{ClientName}.json'
+    Client = C(PATH)
     with open('template.html') as f:
         content = f.read()
-        content = content.replace('{BOOKING_TYPE}', BOOKING_TYPE)
-        content = content.replace('{CLIENT_NAME}', CLIENT_NAME)
-        content = content.replace('{CLEANING_DATE}', CLEANING_DATE)
-        content = content.replace('{CLEANER_NAME}', CLEANER_NAME)
-        content = content.replace('{CLEANER_CONTACT}', CLEANER_CONTACT)
-        content = content.replace('{LOCATION}', LOCATION)
-        content = content.replace('{SERVICE_TYPE}', SERVICE_TYPE)
-        content = content.replace('{SERVICE_DETAIL}', SERVICE_DETAIL)
-        content = content.replace('{SERVICE_PAYMENT}', SERVICE_PAYMENT)
-        content = content.replace('{SERVICE_NOTE}', SERVICE_NOTE)
-        content = content.replace('{SERVICE_DDMMHHmm}', SERVICE_DDMMHHmm)
-        content = content.replace('{ATTACHMENT_iCAL}', ATTACHMENT_iCAL)
+        content = content.replace('{BOOKING_TYPE}', Client.BOOKING_TYPE)
+        content = content.replace('{CLIENT_NAME}', Client.CLIENT_NAME)
+        content = content.replace('{CLEANING_DATE}', Client.CLEANING_DATE)
+        content = content.replace('{CLEANER_NAME}', Client.CLEANER_NAME)
+        content = content.replace('{CLEANER_CONTACT}', Client.CLEANER_CONTACT)
+        content = content.replace('{LOCATION}', Client.LOCATION)
+        content = content.replace('{SERVICE_TYPE}', Client.SERVICE_TYPE)
+        content = content.replace('<!-- {SERVICE_DETAIL} -->', Client.SERVICE_DETAIL)
+        content = content.replace('{SERVICE_PAYMENT}', Client.SERVICE_PAYMENT)
+        content = content.replace('{SERVICE_NOTE}', Client.SERVICE_NOTE)
+        content = content.replace('{SERVICE_DDMMHHmm}', Client.SERVICE_DDMMHHmm)
+        content = content.replace('{ATTACHMENT_iCAL}', Client.ATTACHMENT_iCAL)
         email = open("OutputEmail/Email.html", "w")
         email.write(content)
         email.close()
