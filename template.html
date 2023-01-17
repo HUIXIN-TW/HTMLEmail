@@ -37,6 +37,18 @@
       border-width:0!important;
       padding:15px 30px 15px 30px!important;
     }
+    li {
+      -webkit-text-size-adjust:none;
+      -ms-text-size-adjust:none;
+      mso-line-height-rule:exactly;
+      font-family:arial,'helvetica neue',helvetica,sans-serif;
+      line-height:21px;
+      Margin-bottom:15px;
+      margin-left:0;
+      color:#666666;
+      font-size:14px;
+      text-align:left
+    }
     td .es-button-border:hover a.es-button-1 {
       background:#adadad!important;
       border-color:#adadad!important;
@@ -197,31 +209,36 @@
                         <p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial,'helvetica neue',helvetica,sans-serif;line-height:21px;color:#666666;font-size:14px">
                           Hi, {CLIENT_NAME}<br><br>You have just been booked into a cleaning service&nbsp;-&nbsp;{BOOKING_TYPE}<br><br>Service Details:</p>
                        <ul>
-                        <li style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial,'helvetica neue',helvetica,sans-serif;line-height:21px;Margin-bottom:15px;margin-left:0;color:#666666;font-size:14px">
-                          <p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial,'helvetica neue',helvetica,sans-serif;line-height:21px;color:#666666;font-size:14px">Date: {CLEANING_DATE}</p></li>
-                        <li style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial,'helvetica neue',helvetica,sans-serif;line-height:21px;Margin-bottom:15px;margin-left:0;color:#666666;font-size:14px">
-                          <p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial,'helvetica neue',helvetica,sans-serif;line-height:21px;color:#666666;font-size:14px">Location: {LOCATION}</p></li>
-                        <li style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial,'helvetica neue',helvetica,sans-serif;line-height:21px;Margin-bottom:15px;margin-left:0;color:#666666;font-size:14px">
-                          <p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial,'helvetica neue',helvetica,sans-serif;line-height:21px;color:#666666;font-size:14px">Cleaner Name: {CLEANER_NAME}</p></li>
-                        <li style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial,'helvetica neue',helvetica,sans-serif;line-height:21px;Margin-bottom:15px;margin-left:0;color:#666666;font-size:14px">
-                          <p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial,'helvetica neue',helvetica,sans-serif;line-height:21px;color:#666666;font-size:14px">Cleaner Contact: {CLEANER_CONTACT}</p></li>
-                        <li style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial,'helvetica neue',helvetica,sans-serif;line-height:21px;Margin-bottom:15px;margin-left:0;color:#666666;font-size:14px">
-                          <p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial,'helvetica neue',helvetica,sans-serif;line-height:21px;color:#666666;font-size:14px">Type: {SERVICE_TYPE}</p>
+                        <li>
+                          <p>Date: {CLEANING_DATE}</p></li>
+                        <li>
+                          <p>Location: {LOCATION}</p></li>
+                        <li>
+                          <p>Cleaner Name: {CLEANER_NAME}</p></li>
+                        <li>
+                          <p>Cleaner Contact: {CLEANER_CONTACT}</p></li>
+                        <li>
+                          <p>Type: {SERVICE_TYPE}</p>
                          <ul>
-                          <li style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial,'helvetica neue',helvetica,sans-serif;line-height:21px;Margin-bottom:15px;margin-left:0;color:#666666;font-size:14px;text-align:left">Dusting</li>
-                          <li style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial,'helvetica neue',helvetica,sans-serif;line-height:21px;Margin-bottom:15px;margin-left:0;color:#666666;font-size:14px;text-align:left">Vacuuming</li>
-                          <li style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial,'helvetica neue',helvetica,sans-serif;line-height:21px;Margin-bottom:15px;margin-left:0;color:#666666;font-size:14px;text-align:left">Mopping</li>
-                          <li style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial,'helvetica neue',helvetica,sans-serif;line-height:21px;Margin-bottom:15px;margin-left:0;color:#666666;font-size:14px;text-align:left">Cleaning surfaces (Allowed to organise the client's stuff)</li>
-                          <li style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial,'helvetica neue',helvetica,sans-serif;line-height:21px;Margin-bottom:15px;margin-left:0;color:#666666;font-size:14px;text-align:left">Taking out the trash</li>
+                          <!-- {SERVICE_DETAIL} -->
                          </ul></li>
-                        <li style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial,'helvetica neue',helvetica,sans-serif;line-height:21px;Margin-bottom:15px;margin-left:0;color:#666666;font-size:14px">
-                          <p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial,'helvetica neue',helvetica,sans-serif;line-height:21px;color:#666666;font-size:14px">Payment: {SERVICE_PAYMENT}</p></li>
-                        <li style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial,'helvetica neue',helvetica,sans-serif;line-height:21px;Margin-bottom:15px;margin-left:0;color:#666666;font-size:14px">
-                          <p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial,'helvetica neue',helvetica,sans-serif;line-height:21px;color:#666666;font-size:14px">Note: {SERVICE_NOTE}</p></li>
+                        <li>
+                          <p>Payment: {SERVICE_PAYMENT}</p></li>
+                        <li>
+                          <p>Note: {SERVICE_NOTE}</p></li>
                        </ul>
-                        <p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial,'helvetica neue',helvetica,sans-serif;line-height:21px;color:#666666;font-size:14px">
+                        <p>
                           <br>Any cancellation should be made 24 hours before the cleaning date and time. If you would like to rebook an appointment, please email&nbsp;
-                        <a href="mailto:cleaningpro.girl@gmail.com" target="_blank" style="-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;text-decoration:underline;color:#3D7781;font-size:14px">cleaningpro.girl@gmail.com</a>
+                        <a href="mailto:cleaningpro.girl@gmail.com" 
+                           target="_blank"
+                           style="
+                            -webkit-text-size-adjust:none;
+                            -ms-text-size-adjust:none;
+                            mso-line-height-rule:exactly;
+                            text-decoration:underline;
+                           color:#3D7781;
+                           font-size:14px">
+                           cleaningpro.girl@gmail.com</a>
                         </p></td>
                      </tr>
                      
